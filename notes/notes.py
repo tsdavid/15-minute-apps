@@ -11,6 +11,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 
+
+# SQL DB Table
 Base = declarative_base()
 
 class Note(Base):
@@ -35,6 +37,7 @@ def create_new_note():
     MainWindow()
 
 class MainWindow(QMainWindow, Ui_MainWindow):
+
     def __init__(self, *args, obj=None, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
         self.setupUi(self)
